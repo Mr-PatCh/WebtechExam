@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 55px;
+}
+
+header {
+  color: aliceblue;
+  background-color: #ee7d37;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#logo {
+  filter: invert(100%);
+  margin: 0 10px 0 10px;
+  height: 50px;
+  width: 50px;
+}
+
+header h1 {
+  margin: 0;
+  /* margin-right: 3%; */
+  padding: 5px;
+}
+
+#info {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+h2 {
+  color: aliceblue;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  background: rgba(255, 160, 0, 0.47);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border: 1px solid rgba(255, 160, 0, 1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+}
+
+#About,
+#Gallery,
+#Skills,
+#Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/originals/a3/0c/4f/a30c4f26fc435774e54432112e6c48cd.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  height: auto;
+  min-height: 100%;
+  width: min(90%, 900px);
+  color: rgb(252, 141, 5);
+  background-color: #f9f9f8ec;
+  border: 2px solid #0e0e0e;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.blur {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(3, 3, 3, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+#Home {
+  text-align: center;
+  min-height: 100%;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#pPic {
+  width: min(100%, 400px);
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #ee7d37;
+  border-radius: 5%;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 90%;
+  padding: 30px;
+  flex-wrap: wrap; /* Makes it responsive */
+}
+
+#intro {
+  flex: 1 1 300px;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 20px;
+
+  color: aliceblue;
+  background: rgb(255, 145, 0);
+  border-radius: 10px;
+  box-shadow: gray 0 3px 8px;
+}
+/*About ection*/
+#about-content {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  grid-template-areas:
+    "personal education"
+    "career career";
+
+  gap: 2rem;
+
+  width: min(95%, 1000px);
+  margin: auto;
+}
+
+.personal {
+  grid-area: personal;
+}
+.education {
+  grid-area: education;
+}
+.career {
+  grid-area: career;
+}
+.about-card {
+  margin: 4% 0 0 0;
+  background: #ff9500;
+  color: white;
+  padding: 5%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.about-card p {
+  margin-bottom: 7%;
+}
+
+/* SKILLS SECTION */
+#Skills {
+  height: fit-content;
+}
+
+#skills-content {
+  display: flex;
+
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-height: 400px;
+  margin: 2%;
+  background-color: #ffdca0;
+  border-radius: 4%;
+}
+
+.skill-card img {
+  border: 2px solid #fff;
+  border-radius: 4%;
+  background-color: #fff;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* gallery */
+
+#Gallery .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 2%;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border: 5px solid #ee7d37;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+}
+
+.card:hover {
+  /* transform: translateY(-8px); */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3%;
+}
+
+.card h3 {
+  color: #ee7d37;
+  margin: 15px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin: 0 15px 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+summary:hover {
+  transform: scale(1.05);
+}
+
+summary {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 8px;
+  list-style: none;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#Gallery {
+  height: fit-content;
+}
+
+#Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  margin-top: 5%;
+  display: flex;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: min(90%, 400px);
+  min-height: 500px;
+  background-color: rgba(255, 136, 0, 0.656);
+  border: 2px solid blanchedalmond;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+}
+
+form button {
+  margin-top: 50px;
+  background-color: aliceblue;
+  width: 90px;
+  height: 30px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  padding: 20px 40px;
+
+  background: #ee7d37;
+  color: white;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-info p {
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: 0.3s;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.socials img:hover {
+  transform: scale(1.15);
+}
